@@ -1,0 +1,33 @@
+{
+  "name": "fs-platform",
+  "version": "1.0.0",
+  "description": "FS platform for front-end contests.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fayzzzm/fs-platform.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fayzzzm/fs-platform/issues"
+  },
+  "homepage": "https://github.com/fayzzzm/fs-platform#readme",
+  "devDependencies": {
+    "babel-loader": "^8.1.0",
+    "eslint": "^7.7.0",
+    "prettier": "^2.1.1",
+    "ts-loader": "^8.0.3",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
