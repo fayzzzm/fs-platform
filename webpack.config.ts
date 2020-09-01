@@ -1,5 +1,8 @@
 import * as path from 'path';
 
+const appPath = path.resolve(__dirname, './src');
+const nodeModulesPath = path.resolve('./node_modules');
+
 module.exports = {
     entry: path.resolve(__dirname, 'src/main.ts'),
     output: {
@@ -16,5 +19,12 @@ module.exports = {
                 use: ['babel-loader', 'ts-loader'],
             },
         ],
+    },
+    resolve: {
+        extensions: ['.js', '.ts'],
+        alias: {
+            '@app': appPath,
+        },
+        modules: [appPath, nodeModulesPath],
     },
 };
