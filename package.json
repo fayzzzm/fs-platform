@@ -18,6 +18,9 @@
     },
     "homepage": "https://github.com/fayzzzm/fs-platform#readme",
     "devDependencies": {
+        "@babel/core": "^7.11.5",
+        "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+        "@babel/preset-env": "^7.11.5",
         "@types/cors": "^2.8.7",
         "@types/express": "^4.17.7",
         "@typescript-eslint/eslint-plugin": "^4.0.1",
