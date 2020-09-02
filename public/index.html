@@ -13,16 +13,17 @@
 
         <script>
             const form = document.getElementById('form');
+
             form.onsubmit = async (e) => {
                 e.preventDefault();
 
                 try {
-                    const response = await fetch('http://localhost:8080/check', {
+                    const response = await fetch('http://localhost:8080/code_check/file', {
                         method: 'POST',
                         body: new FormData(form),
                     });
 
-                    console.log(response);
+                    console.log(await response.text());
                 } catch (e) {
                     console.error(e);
                 }
