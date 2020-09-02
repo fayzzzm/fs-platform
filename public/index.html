@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form action="" id="form">
+            <input type="file" name="file" id="" />
+            <input type="submit" value="Submit" />
+        </form>
+
+        <script>
+            const form = document.getElementById('form');
+            form.onsubmit = async (e) => {
+                e.preventDefault();
+
+                try {
+                    const response = await fetch('http://localhost:8080/check', {
+                        method: 'POST',
+                        body: new FormData(form),
+                    });
+
+                    console.log(response);
+                } catch (e) {
+                    console.error(e);
+                }
+            };
+        </script>
+    </body>
+</html>
