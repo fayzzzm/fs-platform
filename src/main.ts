@@ -2,17 +2,15 @@ import cors from 'cors';
 import express from 'express';
 import bodyParser from 'body-parser';
 import * as Boom from '@hapi/boom';
+import { router } from './router';
 
 const app = express();
 
 app.use(cors())
     .use(bodyParser.urlencoded({ extended: false }))
     .use(bodyParser.json())
-    .get('/', (_req, res) => {
-        res.send('Hello world');
-    })
+    .use('/', router)
     .use((_req, _res, next) => next(Boom.notFound('Endpoint not found')))
-    // eslint-disable-next-line
     .use((error: any, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
         if (error.isBoom) {
             sendError(res, error);
