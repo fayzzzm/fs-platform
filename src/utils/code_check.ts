@@ -8,7 +8,7 @@ export const codeCheck = (code: string) => {
         const result = transformSync(code);
 
         tests.forEach((test, idx) => {
-            eval(`const assert = require('assert');${result?.code}${test}`);
+            eval(`const assert = require('assert');${(result as any).code}${test}`);
             testsPassed[idx] = true;
         });
     } catch (e) {
