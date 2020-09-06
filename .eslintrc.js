@@ -4,6 +4,7 @@ module.exports = {
         es2020: true,
         amd: true,
         node: true,
+        jest: true,
     },
     extends: [
         'eslint:recommended',
